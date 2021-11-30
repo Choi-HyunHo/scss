@@ -1,21 +1,17 @@
 @import '_variables.scss';
+@import '_mixin.scss';
 
 body {
   background-color: $bg;
 }
 
-.box {
-  margin-top: 50px;
-  &:hover {
-    background-color: green;
+a {
+  margin-bottom: 20px;
+  &:nth-child(odd) {
+    @include link(blue);
   }
-  h2 {
-    color: red;
-    &:hover {
-      color: black;
-    }
-  }
-  button {
-    color: yellowgreen;
+
+  &:nth-child(even) {
+    @include link(red);
   }
 }
