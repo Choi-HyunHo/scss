@@ -3,3 +3,19 @@
 body {
   background-color: $bg;
 }
+
+.box {
+  margin-top: 50px;
+  &:hover {
+    background-color: green;
+  }
+  h2 {
+    color: red;
+    &:hover {
+      color: black;
+    }
+  }
+  button {
+    color: yellowgreen;
+  }
+}

@@ -1,2 +1,13 @@
 body {
-  background-color: #2cec; }
+  background-color: beige; }
+
+.box {
+  margin-top: 50px; }
+  .box:hover {
+    background-color: green; }
+  .box h2 {
+    color: red; }
+    .box h2:hover {
+      color: black; }
+  .box button {
+    color: yellowgreen; }
