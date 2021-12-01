@@ -1,13 +1,16 @@
+a, button {
+  border-radius: 7px;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background-color: peru;
+  color: inherit; }
+
 body {
   background-color: beige; }
 
 a {
-  margin-bottom: 20px; }
-  a:nth-child(odd) {
-    text-decoration: none;
-    display: block;
-    color: blue; }
-  a:nth-child(even) {
-    text-decoration: none;
-    display: block;
-    color: red; }
+  text-decoration: none; }
+
+button {
+  border: none; }

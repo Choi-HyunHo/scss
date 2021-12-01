@@ -1,17 +1,17 @@
 @import '_variables.scss';
 @import '_mixin.scss';
+@import '_buttons.scss';
 
 body {
   background-color: $bg;
 }
 
 a {
-  margin-bottom: 20px;
-  &:nth-child(odd) {
-    @include link(blue);
-  }
+  @extend %button;
+  text-decoration: none;
+}
 
-  &:nth-child(even) {
-    @include link(red);
-  }
+button {
+  @extend %button;
+  border: none;
 }
