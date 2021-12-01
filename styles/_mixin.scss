@@ -3,3 +3,7 @@
   display: block;
   color: $color;
 }
+
+@mixin responsive {
+  @content;
+}
