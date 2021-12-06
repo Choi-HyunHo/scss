@@ -1,5 +1,6 @@
 @import 'reset.scss';
 @import 'mixin.scss';
+@import 'extend.scss';
 
 * {
   box-sizing: border-box;
@@ -71,13 +72,17 @@ main {
   @include sidespace();
 
   section {
+    &:first-child {
+      margin-top: 220px;
+    }
     width: 100%;
-    margin-top: 220px;
+    height: 100%;
     display: flex;
+    margin-bottom: 80px;
 
     .store-post img {
       width: 800px;
-      height: 800px;
+      height: auto;
     }
 
     .store-text {
@@ -86,6 +91,15 @@ main {
       flex-direction: column;
       align-items: center;
       padding: 250px 180px;
+      height: 800px;
+
+      span {
+        font-family: 'Caladea', serif;
+        font-size: 13px;
+        opacity: 0.7;
+        margin-bottom: 35px;
+        padding-top: 80px;
+      }
 
       p {
         text-align: center;
@@ -96,18 +110,44 @@ main {
       }
 
       button {
-        background-color: inherit;
-        text-transform: uppercase;
-        margin-top: 70px;
-        padding: 20px 50px;
-        border: 2px solid gray;
-        opacity: 0.7;
-        transition: 0.3s ease-in-out;
+        @extend %button;
 
         &:hover {
           cursor: pointer;
           background-color: #414141;
           color: white;
+        }
+      }
+    }
+
+    .item-store {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        font-size: 30px;
+        font-weight: 300;
+      }
+
+      .item-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        h6 {
+          font-weight: 300;
+        }
+
+        button {
+          @extend %button;
         }
       }
     }

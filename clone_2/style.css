@@ -122,6 +122,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+main section .store-text button, main section .item-store .item-list button {
+  background-color: inherit;
+  text-transform: uppercase;
+  margin-top: 70px;
+  padding: 20px 50px;
+  border: 2px solid gray;
+  opacity: 0.7;
+  transition: 0.3s ease-in-out; }
+
 * {
   box-sizing: border-box;
   margin: 0; }
@@ -178,32 +187,52 @@ main {
   margin: 0 140px; }
   main section {
     width: 100%;
-    margin-top: 220px;
-    display: flex; }
+    height: 100%;
+    display: flex;
+    margin-bottom: 80px; }
+    main section:first-child {
+      margin-top: 220px; }
     main section .store-post img {
       width: 800px;
-      height: 800px; }
+      height: auto; }
     main section .store-text {
       background-color: #fbf7f6;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 250px 180px; }
+      padding: 250px 180px;
+      height: 800px; }
+      main section .store-text span {
+        font-family: 'Caladea', serif;
+        font-size: 13px;
+        opacity: 0.7;
+        margin-bottom: 35px;
+        padding-top: 80px; }
       main section .store-text p {
         text-align: center;
         font-size: 30px;
         font-family: 'Caladea', serif;
         opacity: 0.5;
         line-height: 40px; }
-      main section .store-text button {
-        background-color: inherit;
+      main section .store-text button:hover {
+        cursor: pointer;
+        background-color: #414141;
+        color: white; }
+    main section .item-store {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      main section .item-store span {
+        font-size: 12px;
         text-transform: uppercase;
-        margin-top: 70px;
-        padding: 20px 50px;
-        border: 2px solid gray;
-        opacity: 0.7;
-        transition: 0.3s ease-in-out; }
-        main section .store-text button:hover {
-          cursor: pointer;
-          background-color: #414141;
-          color: white; }
+        margin-bottom: 30px; }
+      main section .item-store h2 {
+        font-size: 30px;
+        font-weight: 300; }
+      main section .item-store .item-list {
+        width: 100%;
+        display: flex;
+        justify-content: space-around; }
+        main section .item-store .item-list h6 {
+          font-weight: 300; }
